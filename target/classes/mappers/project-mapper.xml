@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project">
+
+
+
+   <select id="selectProject" resultType="ProjectDTO" parameterType="ProjectDTO">
+      select project_No,
+      member_No,
+      project_Title,
+      project_Thumbnail,
+      project_Category,
+      project_Summary,
+      project_Start_Date,
+      project_End_Date,
+      project_Goal_Amount,
+      project_Video_Type,
+      project_Video,
+      project_Content,
+      project_Address,
+      project_Bank,
+      project_Account,
+      project_VirTualaccount,
+      now_Amount,
+      supporting_Count,
+      project_Process_State,
+      project_Success_State,
+      project_Show_State,
+      project_ViewCnt,
+      project_ReportCount,
+      project_Date 
+      from Dream_Project
+      where project_No=#{project_No}
+      
+      
+
+   </select>
+   
+   <!--신고하기 클릭시 신고수 +1-->
+   <update id="reportiongAction" parameterType="ProjectDTO">
+   update dream_project set project_ReportCount=project_ReportCount+1
+   where project_No=#{project_No}
+   </update>
+   
+   <!--프로젝트 클릭시 해당 프로젝트 조회수 +1 -->
+   <update id="projectViewCntAction" parameterType="ProjectDTO">
+   update dream_project set project_ViewCnt=project_ViewCnt+1
+   where project_No=#{project_No}
+   
+   </update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

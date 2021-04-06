@@ -1,0 +1,9 @@
+.col-md-3.sidebar{
+	padding-top: 10%;
+	/* position: fixed; */
+} 
+
+.catagoryList{
+	position: fixed;
+	width: 10%;
+}

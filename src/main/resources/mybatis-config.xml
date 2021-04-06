@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+   <typeAliases>
+      <package name="com.dreamup.member.domain"/>
+      <package name="com.dreamup.project.domain"/>
+      <package name="com.dreamup.reward.domain"/>
+      <package name="com.dreamup.support.domain"/>
+      <package name="com.dreamup.address.domain"/>
+      <package name="com.dreamup.mainView.domain"/>
+   </typeAliases>
+</configuration>

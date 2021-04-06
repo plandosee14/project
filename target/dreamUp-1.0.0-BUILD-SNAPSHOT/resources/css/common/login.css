@@ -1,0 +1,23 @@
+.modal-header, .loginSpan, .close {
+      background-color: skyblue;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: skyblue;
+  }
+  
+/*   .facebook {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+} */

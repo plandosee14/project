@@ -1,0 +1,21 @@
+.success{
+	color : green;
+}
+
+.fail{
+	color: red;
+
+	}
+.danger{
+	color : red;
+}
+
+.col-md-3.sidebar{
+	padding-top: 10%;
+	/* position: fixed; */
+} 
+
+.categoryList{
+	position: fixed;
+	width: 10%;
+}

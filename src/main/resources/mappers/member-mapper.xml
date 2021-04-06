@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+   <select id="idDuplicationCheck" resultType="Integer"
+      parameterType="String">
+      SELECT COUNT(*)
+      FROM dream_member
+      WHERE member_mail=#{member_authMail}
+   </select>
+
+   <update id="findPass"
+      parameterType="com.dreamup.member.domain.MemberDTO">
+      UPDATE dream_member SET member_pass=#{member_Pass}
+      WHERE member_mail=#{member_Mail}
+   </update>
+
+   <insert id="memberInsert"
+      parameterType="com.dreamup.member.domain.MemberDTO">
+      INSERT INTO Dream_Member(member_No,member_Mail,member_Pass,member_Name)
+      VALUES(
+      dream_member_seq.nextval, #{member_Mail}, #{member_Pass}, #{member_Name})
+   </insert>
+
+   <select id="idPassCheck" resultType="MemberDTO"
+      parameterType="HashMap">
+      SELECT * FROM dream_member WHERE Member_Mail = #{login_mail} AND
+      Member_Pass = #{login_pass}
+   </select>
+   <!-- String login_mail, String login_pass, String new_pass -->
+   <update id="passwordEdit" parameterType="HashMap">
+       UPDATE DREAM_MEMBER
+       SET MEMBER_PASS=#{new_pass}
+       WHERE MEMBER_MAIL=#{login_mail} AND MEMBER_PASS=#{login_pass}
+   </update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

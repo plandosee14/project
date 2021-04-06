@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reward">
+
+
+
+   
+   <select id="selectReward" resultType="rewardDTO" parameterType="int">
+   
+   select reward_No,              
+project_No,             
+reward_Title,           
+reward_Items,           
+reward_Limited_Count,   
+reward_Amount,          
+reward_Delivery_Date from Dream_Reward
+where project_No=#{value}
+   
+   
+   </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
